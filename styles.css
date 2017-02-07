@@ -39,14 +39,18 @@ img {
   text-align: center;
   color: #ffffff;
   font-weight: 800;
-  
+  box-sizing: border-box;
+}
+.web-title, .web-url {
+  padding-top:20px;
 }
 
 .display-standard {
   width: 90%;
-  height: 6em;
+  height: 50px;
   display: block;
   margin : 40px auto;
+  font-size: 1em;
 }
 
 .link-card {
