@@ -2,11 +2,13 @@
 <html>
   <head>
     <title>Linked List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
   </head>
   <body>
+
     <section class="fixed-container">
       <header>
         <span>Linked </span><img src="linked-list-logo.svg" alt="linked-list-logo"><span> List</span>
@@ -15,26 +17,46 @@
       <input class="web-url display-standard" type="text" placeholder="Website URL">
       <button class="submit-btn display-standard">Enter</button>
     </section>
-    <section class="link-card">
-      <article>
+
+    <div class="card-container">
+
+      <article class="link-card">
         <h1 class="web-title-display">The Website Title</h1>
         <p>www.thewebsiteurl.com</p>
-        <section>
+        <section class="button-container">
           <button class="read-btn">Read</button>
           <button class="delete-btn">Delete</button>
         </section>
       </article>
-    </section>
-    <section class="link-card">
-      <article>
+
+      <article class="link-card">
         <h1 class="web-title-display">The Website Title</h1>
         <p>www.thewebsiteurl.com</p>
-        <section>
+        <section class="button-container">
           <button class="read-btn">Read</button>
           <button class="delete-btn">Delete</button>
         </section>
       </article>
-    </section>
+
+      <article class="link-card" hidden>
+        <h1 class="web-title-display">The Website Title</h1>
+        <p>www.thewebsiteurl.com</p>
+        <section class="button-container">
+          <button class="read-btn">Read</button>
+          <button class="delete-btn">Delete</button>
+        </section>
+      </article>
+
+      <article class="link-card" hidden>
+        <h1 class="web-title-display">The Website Title</h1>
+        <p>www.thewebsiteurl.com</p>
+        <section class="button-container">
+          <button class="read-btn">Read</button>
+          <button class="delete-btn">Delete</button>
+        </section>
+      </article>
+
+  </div>
   <script type='text/javascript' src='main.js'></script>
   </body>
 </html>
