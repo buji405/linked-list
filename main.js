@@ -1,9 +1,10 @@
 
-var kitKat = document.querySelector('.submit-btn')
+var submitBtn = document.querySelector('.submit-btn')
+var readBtn = document.querySelector('.read-btn')
+var cardContainer = document.querySelector('.card-container')
+var bookMarkCard = document.querySelector('.link-card')
 
 function cloneCard() {
-  var cardContainer = document.querySelector('.card-container')
-  var bookMarkCard = document.querySelector('.link-card')
   var cardCopy = bookMarkCard.cloneNode(true)
   cardContainer.prepend(cardCopy)
   cardDetails()
@@ -18,6 +19,11 @@ function cardDetails() {
   displayURL.innerText = webURL
 }
 
-kitKat.addEventListener('click', function() {
+submitBtn.addEventListener('click', function() {
   cloneCard()
+})
+
+$('.card-container').on('click', '.read-btn', function(){
+  console.log('woow')
+  $(this).parent().parent().toggleClass('read');
 })
