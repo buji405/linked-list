@@ -1,8 +1,8 @@
+  var submitBtn = document.querySelector('.submit-btn')
+  var readBtn = document.querySelector('.read-btn')
+  var cardContainer = document.querySelector('.card-container')
+  var bookMarkCard = document.querySelector('.link-card')
 
-var submitBtn = document.querySelector('.submit-btn')
-var readBtn = document.querySelector('.read-btn')
-var cardContainer = document.querySelector('.card-container')
-var bookMarkCard = document.querySelector('.link-card')
 
 function cloneCard() {
   var cardCopy = bookMarkCard.cloneNode(true)
@@ -31,4 +31,14 @@ $('.card-container').on('click', '.read-btn', function(){
 $('.card-container').on('click', '.delete-btn', function(){
   console.log('woow')
   $(this).parent().parent().remove();
+})
+
+submitBtn.addEventListener('keyup', function() {
+  var webTitle = document.querySelector('.web-title').value
+  var webURL = document.querySelector('.web-url').value
+    if(webTitle.length > 0) {
+      submitBtn.disabled = false
+      window.alert("Gimme something to work with here!")
+    } else {
+    }
 })
