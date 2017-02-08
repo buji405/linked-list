@@ -44,12 +44,16 @@ img {
   padding-top:20px;
 }
 
+/*input[type="text"] {
+    font-size:25px;
+}*/
+
 .display-standard {
   width: 85%;
   height: 3em;
   display: block;
   margin : 40px auto;
-  font-size: 1em;
+  font-size: 5em;
 }
 
 .link-card {
