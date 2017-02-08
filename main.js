@@ -27,3 +27,8 @@ $('.card-container').on('click', '.read-btn', function(){
   console.log('woow')
   $(this).parent().parent().toggleClass('read');
 })
+
+$('.card-container').on('click', '.delete-btn', function(){
+  console.log('woow')
+  $(this).parent().parent().remove();
+})
