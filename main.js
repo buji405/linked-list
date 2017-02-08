@@ -3,6 +3,11 @@ var submitBtn = document.querySelector('.submit-btn')
 var readBtn = document.querySelector('.read-btn')
 var cardContainer = document.querySelector('.card-container')
 var bookMarkCard = document.querySelector('.link-card')
+var webTitle = document.querySelector('.web-title').value
+var webURL = document.querySelector('.web-url').value
+
+var skittles
+
 
 function cloneCard() {
   var cardCopy = bookMarkCard.cloneNode(true)
@@ -20,10 +25,36 @@ function cardDetails() {
 }
 
 submitBtn.addEventListener('click', function() {
-  cloneCard()
+  validation()
+  if (skittles == true) {
+    cloneCard()
+    cardDetails()
+    skittles = false
+  }
 })
 
+  function validation(){
+    var webTitle = document.querySelector('.web-title').value
+    var webURL = document.querySelector('.web-url').value
+
+    if (webTitle == ""){
+      skittles = false
+      window.alert("Please enter a Title");
+    } else if (webURL == "") {
+      skittles = false
+      window.alert("Please enter a Website URL")
+    } else skittles = true
+  }
+
 $('.card-container').on('click', '.read-btn', function(){
-  console.log('woow')
   $(this).parent().parent().toggleClass('read');
+  $(this).toggleClass('red-text')
+})
+
+
+
+// box.style.backgroundColor = 'red';
+
+$('.card-container').on('click', '.delete-btn', function(){
+  $(this).parent().parent().remove();
 })

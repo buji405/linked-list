@@ -40,6 +40,10 @@ img {
   font-weight: 800;
 }
 
+.submit-btn:hover {
+  background-color: #ffd773;
+}
+
 .web-title, .web-url {
   padding-top:20px;
 }
@@ -78,16 +82,24 @@ p {
   border-bottom: 1px solid #cfd8dc;
 }
 
-.button-container {
-
+.red-text {
+  color: #f05a28;
+  font-weight:800;
 }
 
-.read-button {
+.read-btn, .delete-btn {
+ border: none;
+ border-bottom: 2px solid #f2f4f4;
+ background-color: transparent;
+}
 
+.read-btn:hover, .delete-btn:hover {
+  border-bottom-color: #ffc107;
 }
 
 .delete-btn {
-
+  float:right;
+  padding-right: 20px;
 }
 
 @media screen and (min-width: 900px) {
