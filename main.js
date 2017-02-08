@@ -8,7 +8,8 @@ var bkMkField = document.querySelector('.card-container');
 
 
 function addNewBkMk (bookmarkTitle, bookmarkURL) {
-  
+  // var linkCard = document.querySelector('.link-card')
+  // bkMkField.value = bkMkField.innerText
   bkMkField.appendChild(`<article class="link-card">
     <h1 class="web-title-display">${displayTitle}</h1>
     <p>${displayURL}</p>
@@ -22,6 +23,8 @@ function addNewBkMk (bookmarkTitle, bookmarkURL) {
 submitBtn.addEventListener('click', function(){
    var displayTitle = webTitle.value;
    var displayURL = webURL.value;
+  //  displayTitle.innerText = webTitle.value;
+  //  displayURL.innerText = webURL.value;
    addNewBkMk(displayTitle, displayURL)
 })
 
