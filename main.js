@@ -2,9 +2,10 @@ var submitBtn = document.querySelector('.submit-btn')
 var readBtn = document.querySelector('.read-btn')
 var cardContainer = document.querySelector('.card-container')
 var bookMarkCard = document.querySelector('.link-card')
-var webTitle = document.querySelector('.web-title').value
-var webURL = document.querySelector('.web-url').value
+var webTitle = document.querySelector('.web-title')
+var webURL = document.querySelector('.web-url')
 var skittles
+
 function cloneCard() {
   var cardCopy = bookMarkCard.cloneNode(true)
   cardContainer.prepend(cardCopy)
@@ -23,9 +24,14 @@ submitBtn.addEventListener('click', function() {
   if (skittles == true) {
     cloneCard()
     cardDetails()
+    resetFields()
     skittles = false
   }
 })
+function resetFields() {
+  webTitle.value = ""
+  webURL.value = ""
+}
   function validation(){
     var webTitle = document.querySelector('.web-title').value
     var webURL = document.querySelector('.web-url').value
