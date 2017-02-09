@@ -30,7 +30,7 @@ submitBtn.addEventListener('click', function() {
     resetFields()
     cardCounter()
     skittles = false
-    document.querySelector('.card-amount').innerText = " " + cardCount.length + " "
+    $('.card-amount').text(" " + cardCount.length + " ")
   }
 })
 function resetFields() {
@@ -55,7 +55,7 @@ $('.card-container').on('click', '.read-btn', function(){
 $('.card-container').on('click', '.delete-btn', function(){
   $(this).parent().parent().remove();
     cardCount.shift(tallyClass)
-    document.querySelector('.card-amount').innerText = " " + cardCount.length + " "
+    $('.card-amount').text(" " + cardCount.length + " ")
 })
 
 function cardCounter() {
