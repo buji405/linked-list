@@ -30,7 +30,7 @@ img {
 }
 
 ::-webkit-input-placeholder {
-  font-size: 3em;
+  font-size: 1em;
 }
 
 .submit-btn  {
@@ -40,20 +40,29 @@ img {
   font-weight: 800;
 }
 
+.submit-btn:hover {
+  background-color: #ffd773;
+}
+
 .web-title, .web-url {
   padding-top:20px;
 }
 
-/*input[type="text"] {
-    font-size:25px;
-}*/
+input {
+  border: 1px solid #cfd8dc;
+}
 
 .display-standard {
-  width: 85%;
-  height: 3em;
+  box-sizing: border-box;
   display: block;
-  margin : 40px auto;
-  font-size: 5em;
+  width: 85%;
+  margin : 1.2em auto;
+  font-size: 1em;
+}
+
+.submit-btn {
+  border: none;
+  height: 2.75em
 }
 
 .link-card {
@@ -62,15 +71,22 @@ img {
   flex-direction: column;
   background-color: #ffffff;
   text-indent: 1em;
-  width: 95%;
+  width: 94%;
   margin: 20px auto;
   border: 1px solid #607d8b;
-  color: #455a64
+  color: #455a64;
+  margin-top: 1.55em;
 }
 
 .web-title-display {
+  vertical-align: middle;
   max-height: 30%;
   border-bottom: 1px solid #cfd8dc;
+  width: 90%;
+}
+
+.hidden {
+  display: none;
 }
 
 p {
@@ -78,16 +94,24 @@ p {
   border-bottom: 1px solid #cfd8dc;
 }
 
-.button-container {
-
+.red-text {
+  color: #f05a28;
+  font-weight:800;
 }
 
-.read-button {
+.read-btn, .delete-btn {
+ border: none;
+ border-bottom: 2px solid #f2f4f4;
+ background-color: transparent;
+}
 
+.read-btn:hover, .delete-btn:hover {
+  border-bottom-color: #ffc107;
 }
 
 .delete-btn {
-
+  float:right;
+  padding-right: 20px;
 }
 
 @media screen and (min-width: 900px) {
@@ -111,9 +135,10 @@ p {
   }
 
   .display-standard {
+    box-sizing: border-box;
     margin-top: 3em;
     margin-bottom: 3em;
-    height: 1.75em;
+    /*height: 1.75em;*/
     font-size: .5em;
   }
 
