@@ -51,10 +51,6 @@ $('.card-container').on('click', '.read-btn', function(){
   $(this).toggleClass('red-text')
 })
 
-
-
-// box.style.backgroundColor = 'red';
-
 $('.card-container').on('click', '.delete-btn', function(){
   $(this).parent().parent().remove();
 })
