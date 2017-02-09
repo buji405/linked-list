@@ -4,6 +4,9 @@ var cardContainer = document.querySelector('.card-container')
 var bookMarkCard = document.querySelector('.link-card')
 var webTitle = document.querySelector('.web-title')
 var webURL = document.querySelector('.web-url')
+var tallyClass = document.querySelectorAll('.tally-class')
+
+var cardCount = []
 var skittles
 
 function cloneCard() {
@@ -25,7 +28,9 @@ submitBtn.addEventListener('click', function() {
     cloneCard()
     cardDetails()
     resetFields()
+    cardCounter()
     skittles = false
+    document.querySelector('.card-amount').innerText = " " + cardCount.length + " "
   }
 })
 function resetFields() {
@@ -49,4 +54,10 @@ $('.card-container').on('click', '.read-btn', function(){
 })
 $('.card-container').on('click', '.delete-btn', function(){
   $(this).parent().parent().remove();
+    cardCount.shift(tallyClass)
+    document.querySelector('.card-amount').innerText = " " + cardCount.length + " "
 })
+
+function cardCounter() {
+  cardCount.unshift(tallyClass)
+}
