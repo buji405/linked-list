@@ -1,20 +1,15 @@
-
 var submitBtn = document.querySelector('.submit-btn')
 var readBtn = document.querySelector('.read-btn')
 var cardContainer = document.querySelector('.card-container')
 var bookMarkCard = document.querySelector('.link-card')
 var webTitle = document.querySelector('.web-title').value
 var webURL = document.querySelector('.web-url').value
-
 var skittles
-
-
 function cloneCard() {
   var cardCopy = bookMarkCard.cloneNode(true)
   cardContainer.prepend(cardCopy)
   cardDetails()
 }
-
 function cardDetails() {
   var webTitle = document.querySelector('.web-title').value
   var webURL = document.querySelector('.web-url').value
@@ -23,7 +18,6 @@ function cardDetails() {
   displayTitle.innerText = webTitle
   displayURL.innerText = webURL
 }
-
 submitBtn.addEventListener('click', function() {
   validation()
   if (skittles == true) {
@@ -32,11 +26,9 @@ submitBtn.addEventListener('click', function() {
     skittles = false
   }
 })
-
   function validation(){
     var webTitle = document.querySelector('.web-title').value
     var webURL = document.querySelector('.web-url').value
-
     if (webTitle == ""){
       skittles = false
       window.alert("Please enter a Title");
@@ -45,12 +37,10 @@ submitBtn.addEventListener('click', function() {
       window.alert("Please enter a Website URL")
     } else skittles = true
   }
-
 $('.card-container').on('click', '.read-btn', function(){
   $(this).parent().parent().toggleClass('read');
   $(this).toggleClass('red-text')
 })
-
 $('.card-container').on('click', '.delete-btn', function(){
   $(this).parent().parent().remove();
 })
